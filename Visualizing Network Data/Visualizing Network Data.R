@@ -49,6 +49,7 @@ plot(g.bip, layout=-layout.bipartite(g.bip)[,2:1], vertex.size=30,
      vertex.shape=ifelse(V(g.bip)$type, "rectangle", "circle"), 
      vertex.color=ifelse(V(g.bip)$type,"red", "cyan"))
 
+
 #####Decorating Graph Layout
 library(igraphdata)
 data(karate)
@@ -124,7 +125,7 @@ party.names <- sort(unique(V(fblog)$PolParty))
 set.seed(42)
 l = layout.kamada.kawai(fblog)
 party.nums.f <- as.factor(V(fblog)$PolParty)
-party.nums <- as.numeric(party.nums.f)                        
+party.nums <- as.numeric(party.nums.f) 
 
 plot(fblog, layout=l, vertex.label=NA, vertex.color=party.nums, vertex.size=3)
 
